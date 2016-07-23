@@ -32,6 +32,7 @@ class MinitestPracticeTest < Minitest::Test
     assert_equal(@main.fizz_buzz(3), 'Fizz')
     assert_equal(@main.fizz_buzz(5), 'Buzz')
     assert_equal(@main.fizz_buzz(15), 'FizzBuzz')
+    #
   end
 
   def test_hello
