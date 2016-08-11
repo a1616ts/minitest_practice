@@ -33,7 +33,7 @@ module MinitestPractice
     end
 
     def hello
-      print 'hello'
+      print 'Hello'
     end
   end
 end

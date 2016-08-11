@@ -10,6 +10,7 @@ class MinitestPracticeTest < Minitest::Test
   end
 
   def test_odd?
+    refute @main.odd?(0), '0 is not odd'
     assert @main.odd?(1), '1 is odd'
     refute @main.odd?(2), '2 is not odd'
     assert @main.odd?(3), '3 is odd'
@@ -29,13 +30,24 @@ class MinitestPracticeTest < Minitest::Test
   end
 
   def test_fizz_buzz
+    # Fizz
     assert_equal(@main.fizz_buzz(3), 'Fizz')
+    assert_equal(@main.fizz_buzz(6), 'Fizz')
+
+    # Buzz
     assert_equal(@main.fizz_buzz(5), 'Buzz')
+    assert_equal(@main.fizz_buzz(10), 'Buzz')
+
+    # FizzBuzz
     assert_equal(@main.fizz_buzz(15), 'FizzBuzz')
-    #
+    assert_equal(@main.fizz_buzz(30), 'FizzBuzz')
+
+    # None
+    assert_equal(@main.fizz_buzz(2), '')
+    assert_equal(@main.fizz_buzz(7), '')
   end
 
   def test_hello
-    assert_output('hello') { @main.hello() }
+    assert_output('Hello') { @main.hello() }
   end
 end
